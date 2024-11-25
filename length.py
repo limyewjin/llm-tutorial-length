@@ -48,7 +48,8 @@ for i in range(NUM_ITERATIONS):
             response = ask_func(
                 f"Summarize the given whitepaper:\n"
                 f"{whitepaper}\n"
-                f"{prompt}")
+                f"{prompt}\n"
+                f"Return only the summary, nothing else.")
             print(response)
 
             word_count = len(re.findall(r'\w+', response))
