@@ -29,7 +29,7 @@ PROMPTS = ["The summary is 100 words long.",
 ## Results
 
 - Anthropic seems to have some form of [prompt caching](https://www.anthropic.com/news/prompt-caching) as the
-  are the same across runs, so I added temperature=0.05 to add some randomness.
+  stats were the same across runs, so I added temperature=0.05 to add some randomness.
 - "At most X words" is the most reliable across all models for enforcing upper bounds
 - Exact word counts ("100 words long") are relatively consistent but tend to overshoot slightly
 - Numerical specifications work better than qualitative ones ("short and concise")
