@@ -29,29 +29,30 @@ PROMPTS = ["The summary is 100 words long.",
 ## Results
 
 - Anthropic seems to have some form of [prompt caching](https://www.anthropic.com/news/prompt-caching) as the
-  are the same across runs, but looks like it's not enabled by default. To investigate more.
+  are the same across runs, so I added temperature=0.05 to add some randomness.
 - "At most X words" is the most reliable across all models for enforcing upper bounds
 - Exact word counts ("100 words long") are relatively consistent but tend to overshoot slightly
 - Numerical specifications work better than qualitative ones ("short and concise")
-- Does "at most" work? Yes, "at most" is quite effective:
-  - OpenAI stays under 100 (mean: 96.8 words)
-  - Gemini stays close to 100 (mean: 101-103 words)
-  - Claude slightly exceeds at 102 words
-  - All models show low variance with "at most" constraints
+- Does "at most" work? Yes, "at most" is highly effective:
+  - OpenAI stays under 100 (mean: 86-91 words)
+  - Gemini stays under 100 (mean: 91-96 words)
+  - Claude consistently uses exactly 81 words
+  - All models show remarkably low variance with "at most" constraints
 - Does "at least" work? Yes, but with interesting variations:
   - All models exceed the minimum 100 words significantly
-  - Gemini produces much longer outputs (229-280 words)
-  - Claude produces 183-214 words
-  - OpenAI produces 157-170 words
+  - Gemini produces longer outputs (215-238 words)
+  - Claude produces 167-193 words
+  - OpenAI produces 119-157 words
 - Reading Time Interpretations:
   - Models interpret "1 minute" differently:
-      - Claude: 207 words
-      - Gemini: 172 words (mean)
-      - OpenAI: 188 words (mean)
+      - Claude: 126 words (mean)
+      - Gemini: 159 words (mean)
+      - OpenAI: 152 words (mean)
   - "30 seconds" produces shorter but inconsistent lengths
 - Qualitative Descriptors:
   - Surprisingly, "extremely short and concise" often produces longer outputs than "short and concise" for some models
-  - OpenAI's interpretation of "short and concise" is much longer (280 words) than Gemini's (127 words)
+  - OpenAI's interpretation of "short and concise" averages 135 words
+  - Gemini's interpretation averages 114 words
   - Qualitative descriptors show the highest variance across all models
 - Numeric vs Text Numbers:
   - "100 words" vs "one hundred words" produce similar results
