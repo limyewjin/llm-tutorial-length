@@ -1,5 +1,5 @@
 """
-This module provides functions to interact with different AI models 
+This module provides functions to interact with different AI models
 including Anthropic, Gemini, and OpenAI.
 """
 
@@ -78,7 +78,8 @@ def ask_openai(prompt, model=OPENAI_MODEL):
 
     Args:
       prompt (str): The input text to be sent to the OpenAI API.
-      model (str, optional): The model to use for generating the response. Defaults to OPENAI_MODEL.
+      model (str, optional): The model to use for generating the response.
+                             Defaults to OPENAI_MODEL.
 
     Returns:
       str: The content of the response from the OpenAI API.
