@@ -48,7 +48,7 @@ def ask_anthropic(prompt, model=ANTHROPIC_MODEL):
     message = anthropic_client.messages.create(
         model=model,
         max_tokens=1024,
-        temperature=0.0,
+        temperature=0.05,  # Adding a small amount of randomness
         messages=[{"role": "user", "content": prompt}],
     )
     return message.content[0].text
