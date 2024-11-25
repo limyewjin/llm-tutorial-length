@@ -34,21 +34,21 @@ PROMPTS = ["The summary is 100 words long.",
 - Exact word counts ("100 words long") are relatively consistent but tend to overshoot slightly
 - Numerical specifications work better than qualitative ones ("short and concise")
 - Does "at most" work? Yes, "at most" is quite effective:
-- OpenAI stays under 100 (mean: 96.8 words)
-- Gemini stays close to 100 (mean: 101-103 words)
-- Claude slightly exceeds at 102 words
-- All models show low variance with "at most" constraints
+  - OpenAI stays under 100 (mean: 96.8 words)
+  - Gemini stays close to 100 (mean: 101-103 words)
+  - Claude slightly exceeds at 102 words
+  - All models show low variance with "at most" constraints
 - Does "at least" work? Yes, but with interesting variations:
-- All models exceed the minimum 100 words significantly
-- Gemini produces much longer outputs (229-280 words)
-- Claude produces 183-214 words
-- OpenAI produces 157-170 words
+  - All models exceed the minimum 100 words significantly
+  - Gemini produces much longer outputs (229-280 words)
+  - Claude produces 183-214 words
+  - OpenAI produces 157-170 words
 - Reading Time Interpretations:
-- Models interpret "1 minute" differently:
-    - Claude: 207 words
-    - Gemini: 172 words (mean)
-    - OpenAI: 188 words (mean)
-- "30 seconds" produces shorter but inconsistent lengths
+  - Models interpret "1 minute" differently:
+      - Claude: 207 words
+      - Gemini: 172 words (mean)
+      - OpenAI: 188 words (mean)
+  - "30 seconds" produces shorter but inconsistent lengths
 - Qualitative Descriptors:
   - Surprisingly, "extremely short and concise" often produces longer outputs than "short and concise" for some models
   - OpenAI's interpretation of "short and concise" is much longer (280 words) than Gemini's (127 words)
