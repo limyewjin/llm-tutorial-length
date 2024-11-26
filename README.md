@@ -1,4 +1,6 @@
-# LLM Tutorial - Length
+# LLM Tutorial - Checking different prompts for controlling output length
+
+# Text Length Control
 
 Let's test how we can control output length with different prompts across different models!
 
@@ -64,3 +66,7 @@ PROMPTS = ["The summary is 100 words long.",
 - Expect outputs to exceed specified lengths by 10-15% when using exact word counts
 - Don't rely on reading time estimates for consistent length control
 - When working across multiple models, use explicit numerical constraints for best consistency
+
+
+# Bullet Points Control
+
