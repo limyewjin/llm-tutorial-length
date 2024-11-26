@@ -70,3 +70,19 @@ PROMPTS = ["The summary is 100 words long.",
 
 # Bullet Points Control
 
+### Consistency in Meeting Requested List Length
+
+- For small to medium lists (3-20 points):
+  - All models are extremely consistent, perfectly hitting the requested number of points
+  - Anthropic, Gemini, and OpenAI all show 0.0 standard deviation for list counts
+- For large lists (50 points):
+  - OpenAI tends to overshoot (avg 55.8 points)
+  - Gemini slightly overshoots (avg 52.6 points)
+  - Anthropic tends to undershoot (avg 14.0 points for ordered, 48.2 for unordered)
+
+### Ordered vs Unordered Lists
+  - For 50-point lists, ordered lists maintain exact counts while unordered lists tend to overshoot
+  - OpenAI: Ordered (exactly 50) vs Unordered (avg 55.8)
+  - Gemini: Ordered (exactly 50) vs Unordered (avg 52.6)
+  - Anthropic: Ordered (avg 14.0) vs Unordered (avg 48.2)
+  - Recommendation: Use ordered lists when precise control over list length is critical
